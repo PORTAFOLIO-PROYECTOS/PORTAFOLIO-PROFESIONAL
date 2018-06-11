@@ -3,10 +3,22 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Layout</title>
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    
-    @RenderBody()
 
+    <div class="container">
+        <h1 class="jumbotron">
+            Portafolio
+        </h1>
+        
+        @RenderBody()
+           
+    </div>
+
+
+    <script src="~/Assets/js/jquery.min.js"></script>
+    <script src="~/Assets/js/popper.min.js"></script>
+    <script src="~/Assets/js/bootstrap.min.js"></script>
 </body>
 </html>
