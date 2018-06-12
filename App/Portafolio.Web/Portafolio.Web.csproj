@@ -95,7 +95,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Assets\css\admin-style.css" />
+    <Content Include="Areas\Admin\Assets\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Assets\css\font-awesome.min.css" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\Assets\images\ajax-loader.gif" />
+    <Content Include="Areas\Admin\Assets\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.min.js" />
+    <Content Include="Areas\Admin\Assets\js\popper.min.js" />
     <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\images\perfil.png" />
     <Content Include="Assets\js\bootstrap.min.js" />
     <Content Include="Assets\js\jquery.min.js" />
     <Content Include="Assets\js\popper.min.js" />
@@ -105,6 +115,11 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ExperienciaController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HabilidadesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TestimoniosController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -114,6 +129,18 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_Viewstart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\Layout.cshtml" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Admin\Assets\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\Experiencia\Index.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -124,9 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\Habilidades\" />
+    <Folder Include="Areas\Admin\Views\Login\" />
+    <Folder Include="Areas\Admin\Views\Testimonios\" />
+    <Folder Include="Areas\Admin\Views\Usuario\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Default\" />
   </ItemGroup>
