@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace Portafolio.Web.Controllers
 {
-    public class HomeController : Controller
+    public class DefaultController : Controller
     {
-        // GET: Home
+        // GET: Default
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Alumno()
         {
             return View();
         }
