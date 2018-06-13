@@ -13,5 +13,10 @@ namespace Portafolio.Web.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public ActionResult Logout()
+        {
+            return Redirect("~/");
+        }
     }
 }
