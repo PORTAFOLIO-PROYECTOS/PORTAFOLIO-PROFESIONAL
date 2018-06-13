@@ -141,6 +141,7 @@
     <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Areas\Admin\Views\Experiencia\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Habilidades\Index.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -151,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\Habilidades\" />
     <Folder Include="Areas\Admin\Views\Login\" />
     <Folder Include="Areas\Admin\Views\Testimonios\" />
     <Folder Include="Areas\Admin\Views\Usuario\" />
