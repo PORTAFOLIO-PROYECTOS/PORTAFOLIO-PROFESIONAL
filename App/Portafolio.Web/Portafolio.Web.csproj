@@ -159,6 +159,10 @@
     <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Portafolio.Helper\Portafolio.Helper.csproj">
+      <Project>{356cff42-1c41-4b6a-8433-05ecd56e441d}</Project>
+      <Name>Portafolio.Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Portafolio.Model\Portafolio.Model.csproj">
       <Project>{9c09d7a0-15fb-4330-a22c-a44e67e958cc}</Project>
       <Name>Portafolio.Model</Name>

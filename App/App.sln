@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portafolio.Web", "Portafoli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portafolio.Model", "Portafolio.Model\Portafolio.Model.csproj", "{9C09D7A0-15FB-4330-A22C-A44E67E958CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portafolio.Helper", "Portafolio.Helper\Portafolio.Helper.csproj", "{356CFF42-1C41-4B6A-8433-05ECD56E441D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9C09D7A0-15FB-4330-A22C-A44E67E958CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C09D7A0-15FB-4330-A22C-A44E67E958CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C09D7A0-15FB-4330-A22C-A44E67E958CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356CFF42-1C41-4B6A-8433-05ECD56E441D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356CFF42-1C41-4B6A-8433-05ECD56E441D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356CFF42-1C41-4B6A-8433-05ECD56E441D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356CFF42-1C41-4B6A-8433-05ECD56E441D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
