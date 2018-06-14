@@ -97,19 +97,25 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Assets\css\admin-style.css" />
     <Content Include="Areas\Admin\Assets\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Assets\css\bootstrap.theme.min.css" />
     <Content Include="Areas\Admin\Assets\css\font-awesome.min.css" />
     <Content Include="Areas\Admin\Assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Areas\Admin\Assets\images\ajax-loader.gif" />
     <Content Include="Areas\Admin\Assets\js\bootstrap.min.js" />
-    <Content Include="Areas\Admin\Assets\js\jquery.min.js" />
-    <Content Include="Areas\Admin\Assets\js\popper.min.js" />
+    <Content Include="Areas\Admin\Assets\js\ini.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.anexgrid.min.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.form.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.validate.min.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\images\perfil.png" />
     <Content Include="Assets\js\bootstrap.min.js" />
     <Content Include="Assets\js\jquery.min.js" />
     <Content Include="Assets\js\popper.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Uploads\perfil.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

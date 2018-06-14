@@ -53,6 +53,7 @@
     <Compile Include="Habilidad.cs" />
     <Compile Include="PortafolioContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseModel.cs" />
     <Compile Include="TablaDato.cs" />
     <Compile Include="Testimonio.cs" />
     <Compile Include="Usuario.cs" />
