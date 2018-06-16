@@ -1,5 +1,6 @@
 ﻿using Helper;
 using Portafolio.Model;
+using Portafolio.Web.Areas.Admin.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Portafolio.Web.Areas.Admin.Controllers
 {
+    [NoLogin]
     public class LoginController : Controller
     {
         private Usuario usuario = new Usuario();
