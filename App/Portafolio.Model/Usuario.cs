@@ -97,5 +97,23 @@ namespace Portafolio.Model
             }
             return rm;
         }
+
+        public Usuario Obtener(int id)
+        {
+            var usuario = new Usuario();
+            try
+            {
+                using (var ctx = new PortafolioContext())
+                {
+                    usuario = ctx.Usuario.Where(x => x.id == id).SingleOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return usuario;
+        }
     }
 }
