@@ -104,6 +104,29 @@
     <Content Include="Areas\Admin\Assets\images\ajax-loader.gif" />
     <Content Include="Areas\Admin\Assets\js\bootstrap.min.js" />
     <Content Include="Areas\Admin\Assets\js\ini.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-bg_flat_0_ffffff_40x100.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-bg_highlight-soft_0_cccccc_1x100.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\index.html" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\jquery-ui.css" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\jquery-ui.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="Areas\Admin\Assets\js\jquery-ui\jquery-ui.theme.min.css" />
     <Content Include="Areas\Admin\Assets\js\jquery.anexgrid.min.js" />
     <Content Include="Areas\Admin\Assets\js\jquery.form.js" />
     <Content Include="Areas\Admin\Assets\js\jquery.js" />
@@ -152,6 +175,7 @@
     <Content Include="Areas\Admin\Views\Testimonios\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Usuario\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Experiencia\Crud.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

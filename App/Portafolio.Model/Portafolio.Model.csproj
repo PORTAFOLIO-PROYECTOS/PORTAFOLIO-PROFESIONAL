@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnexGRID.cs" />
     <Compile Include="Experiencia.cs" />
     <Compile Include="Habilidad.cs" />
     <Compile Include="PortafolioContext.cs" />
