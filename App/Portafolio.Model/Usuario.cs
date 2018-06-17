@@ -6,8 +6,13 @@ namespace Portafolio.Model
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
     using System.Data.Entity.Spatial;
+    using System.Data.Entity.Validation;
+    using System.IdentityModel.Metadata;
+    using System.IO;
     using System.Linq;
+    using System.Web;
 
     [Table("Usuario")]
     public partial class Usuario
@@ -114,6 +119,50 @@ namespace Portafolio.Model
                 throw;
             }
             return usuario;
+        }
+
+        public ResponseModel Guardar(HttpPostedFileBase Foto)
+        {
+            var rm = new ResponseModel();
+            try
+            {
+                using (var ctx = new PortafolioContext())
+                {
+                    ctx.Configuration.ValidateOnSaveEnabled = false;
+
+                    var eUsuario = ctx.Entry(this);
+                    eUsuario.State = EntityState.Modified;
+
+                    // campos que estamos ignorando
+                    if (Foto != null)
+                    {
+                        // Nombre del archivo, es decir, lo reno,renombramos para que no se reptita nunca
+                        string archivo = DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(Foto.FileName);
+
+                        // la ruta donde lo vamos a guardar
+                        Foto.SaveAs(HttpContext.Current.Server.MapPath("~/Uploads/" + archivo));
+
+                        // establecemos en nuectro modelo el nombre de archivo
+                        this.Foto = archivo;
+                    }
+                    else eUsuario.Property(x => x.Foto).IsModified = false;
+
+                    if(this.Password == null) eUsuario.Property(x => x.Password).IsModified = false;
+
+                    ctx.SaveChanges();
+                    rm.SetResponse(true);
+                }
+            }
+            catch (DbEntityValidationException e)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return rm;
         }
     }
 }
