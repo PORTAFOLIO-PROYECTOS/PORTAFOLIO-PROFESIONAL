@@ -100,7 +100,7 @@ namespace Portafolio.Model
             return rm;
         }
 
-        public AnexGRIDResponde Listar(AnexGRID grid, int tipo)
+        public AnexGRIDResponde Listar(AnexGRID grid, int tipo, int usuario_id)
         {
             try
             {
@@ -108,7 +108,7 @@ namespace Portafolio.Model
                 {
                     ctx.Configuration.LazyLoadingEnabled = false;
                     grid.Inicializar();
-                    var query = ctx.Experiencia.Where(x => x.Tipo == tipo);
+                    var query = ctx.Experiencia.Where(x => x.Tipo == tipo).Where(x => x.Usuario_id == usuario_id);
                     // ordenamineto
                     if (grid.columna == "id")
                         query = grid.columna_orden == "DESC" ? query.OrderByDescending(x => x.id) : query.OrderBy(x => x.id);
