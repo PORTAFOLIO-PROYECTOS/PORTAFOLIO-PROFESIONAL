@@ -1,4 +1,7 @@
-﻿using Portafolio.Web.Areas.Admin.Filters;
+﻿using Helper;
+using Model;
+using Portafolio.Model;
+using Portafolio.Web.Areas.Admin.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +13,41 @@ namespace Portafolio.Web.Areas.Admin.Controllers
     [Autenticado]
     public class HabilidadesController : Controller
     {
+        private Habilidad habilidad = new Habilidad();
+
         // GET: Admin/Habilidades
         public ActionResult Index()
         {
             return View();
+        }
+
+        public JsonResult Listar(AnexGRID grid)
+        {
+            return Json(habilidad.Listar(grid, SessionHelper.GetUser()));
+        }
+
+        public ActionResult Crud(byte tipo = 0, int id = 0)
+        {
+            if (id == 0) habilidad.Usuario_id = SessionHelper.GetUser();
+            else habilidad = habilidad.Obtener(id);
+
+            return View(habilidad);
+        }
+
+        public JsonResult Guardar(Habilidad model)
+        {
+            var rm = new ResponseModel();
+            if (ModelState.IsValid)
+            {
+                rm = model.Guardar();
+                if (rm.response) rm.href = Url.Content("~/Admin/Habilidades");
+            }
+            return Json(rm);
+        }
+
+        public JsonResult Eliminar(int id)
+        {
+            return Json(habilidad.Eliminar(id));
         }
     }
 }

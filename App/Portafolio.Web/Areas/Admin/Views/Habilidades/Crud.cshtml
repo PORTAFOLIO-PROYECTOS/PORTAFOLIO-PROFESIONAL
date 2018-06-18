@@ -1,0 +1,33 @@
+﻿@using Portafolio.Model
+@model Habilidad
+@{
+    ViewBag.Title = (Model.id > 0 ? Model.Nombre : "Nuevo registro");
+}
+
+<h2 class="page-header">
+    @(Model.id > 0 ? Model.Nombre : "Nuevo registro")
+</h2>
+<ol class="breadcrumb">
+    <li><a href="~/Admin/Habilidades">Habilidades</a></li>
+    <li class="active">@(Model.id > 0 ? Model.Nombre : "Nuevo registro")</li>
+</ol>
+@using (Html.BeginForm("Guardar", "Habilidades", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.id)
+    @Html.HiddenFor(x => x.Usuario_id)
+    <div class="form-group">
+        @Html.LabelFor(x => x.Nombre)
+        @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "label label-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Dominio)
+        <input type="number" name="Dominio" id="Dominio" class="form-control" min="1" max="100" placeholder="Ingrese el dominio que tiene sobre esta habilidad" value="@Model.Dominio"/>
+        @Html.ValidationMessageFor(x => x.Dominio, null, new { @class = "label label-danger" })
+    </div>
+    <div class="text-right">
+        <button type="submit" data-ajax="true" class="btn btn-primary">Guardar</button>
+    </div>
+    <p>&nbsp;</p>
+}
+
