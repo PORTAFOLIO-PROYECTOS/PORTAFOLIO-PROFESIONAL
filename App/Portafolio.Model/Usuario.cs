@@ -72,6 +72,10 @@ namespace Portafolio.Model
 
         public virtual ICollection<Testimonio> Testimonio { get; set; }
 
+        // para no conciderar
+        [NotMapped]
+        public TablaDato Pais { get; set; }
+
         public ResponseModel Acceder(string Email, string Password)
         {
             var rm = new ResponseModel();
@@ -103,14 +107,26 @@ namespace Portafolio.Model
             return rm;
         }
 
-        public Usuario Obtener(int id)
+        public Usuario Obtener(int id, bool include = false)
         {
             var usuario = new Usuario();
             try
             {
                 using (var ctx = new PortafolioContext())
                 {
-                    usuario = ctx.Usuario.Where(x => x.id == id).SingleOrDefault();
+                    if (!include)
+                    {
+                        usuario = id > 0 ? ctx.Usuario.Where(x => x.id == id).SingleOrDefault() : null;
+                    }
+                    else
+                    {
+                        usuario = ctx.Usuario.Include("Experiencia")
+                                            .Include("Habilidad")
+                                            .Include("Testimonio")
+                                            .Where(x => x.id == id).SingleOrDefault();
+                    }
+                    // obteniando un registro adicional de manera manual, sin usar include
+                    usuario.Pais = id > 0 ? new TablaDato().Obtener("pais", usuario.Pais_id.ToString()) : null;
                 }
             }
             catch (Exception)

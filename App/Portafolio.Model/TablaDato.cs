@@ -43,5 +43,23 @@ namespace Portafolio.Model
             }
             return datos;
         }
+
+        public TablaDato Obtener(string relacion, string valor)
+        {
+            var datos = new TablaDato();
+            try
+            {
+                using (var ctx = new PortafolioContext())
+                {
+                    datos = ctx.TablaDato.Where(x => x.Relacion == relacion).Where(x => x.Valor == valor).SingleOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return datos;
+        }
     }
 }
