@@ -132,11 +132,20 @@
     <Content Include="Areas\Admin\Assets\js\jquery.js" />
     <Content Include="Areas\Admin\Assets\js\jquery.validate.min.js" />
     <Content Include="Areas\Admin\Assets\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Assets\css\admin-style.css" />
+    <Content Include="Assets\css\anexsoft-theme\images\ajax-loader.gif" />
+    <Content Include="Assets\css\anexsoft-theme\images\bg.jpg" />
+    <Content Include="Assets\css\anexsoft-theme\style.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
-    <Content Include="Assets\images\perfil.png" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Assets\js\bootstrap.min.js" />
-    <Content Include="Assets\js\jquery.min.js" />
-    <Content Include="Assets\js\popper.min.js" />
+    <Content Include="Assets\js\ini.js" />
+    <Content Include="Assets\js\jquery.form.js" />
+    <Content Include="Assets\js\jquery.js" />
+    <Content Include="Assets\js\jquery.validate.min.js" />
+    <Content Include="Assets\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Uploads\perfil.png" />
     <Content Include="Web.config" />
@@ -157,7 +166,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_Viewstart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\Layout.cshtml" />
@@ -178,7 +189,47 @@
     <Content Include="Areas\Admin\Views\Experiencia\Crud.cshtml" />
     <Content Include="Areas\Admin\Views\Habilidades\Crud.cshtml" />
     <Content Include="Areas\Admin\Views\Testimonios\Crud.cshtml" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\less\animated.less" />
+    <Content Include="Assets\less\bordered-pulled.less" />
+    <Content Include="Assets\less\core.less" />
+    <Content Include="Assets\less\fixed-width.less" />
+    <Content Include="Assets\less\font-awesome.less" />
+    <Content Include="Assets\less\icons.less" />
+    <Content Include="Assets\less\larger.less" />
+    <Content Include="Assets\less\list.less" />
+    <Content Include="Assets\less\mixins.less" />
+    <Content Include="Assets\less\path.less" />
+    <Content Include="Assets\less\rotated-flipped.less" />
+    <Content Include="Assets\less\stacked.less" />
+    <Content Include="Assets\less\variables.less" />
+    <Content Include="Assets\scss\font-awesome.scss" />
+    <Content Include="Assets\scss\_animated.scss" />
+    <Content Include="Assets\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\scss\_core.scss" />
+    <Content Include="Assets\scss\_fixed-width.scss" />
+    <Content Include="Assets\scss\_icons.scss" />
+    <Content Include="Assets\scss\_larger.scss" />
+    <Content Include="Assets\scss\_list.scss" />
+    <Content Include="Assets\scss\_mixins.scss" />
+    <Content Include="Assets\scss\_path.scss" />
+    <Content Include="Assets\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\scss\_stacked.scss" />
+    <Content Include="Assets\scss\_variables.scss" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Shared\_User.cshtml" />
+    <Content Include="Views\Shared\_MenuAdicional.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,7 +240,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Portafolio.Helper\Portafolio.Helper.csproj">
