@@ -116,7 +116,7 @@ namespace Portafolio.Model
                 {
                     if (!include)
                     {
-                        usuario = id > 0 ? ctx.Usuario.Where(x => x.id == id).SingleOrDefault() : null;
+                        usuario = ctx.Usuario.Where(x => x.id == id).SingleOrDefault();
                     }
                     else
                     {
@@ -126,7 +126,7 @@ namespace Portafolio.Model
                                             .Where(x => x.id == id).SingleOrDefault();
                     }
                     // obteniando un registro adicional de manera manual, sin usar include
-                    usuario.Pais = id > 0 ? new TablaDato().Obtener("pais", usuario.Pais_id.ToString()) : null;
+                    usuario.Pais =  new TablaDato().Obtener("pais", usuario.Pais_id.ToString());
                 }
             }
             catch (Exception)

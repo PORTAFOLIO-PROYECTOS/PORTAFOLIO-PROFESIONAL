@@ -3,7 +3,7 @@
     Layout = null;
     string controlador = ViewContext.RouteData.Values["Controller"].ToString().ToLower();
 
-    Usuario usuario = new Usuario().Obtener(Helper.SessionHelper.GetUser());
+    Usuario usuario = controlador == "login" ? new Usuario() : new Usuario().Obtener(Helper.SessionHelper.GetUser());
 }
 <!DOCTYPE html>
 <html lang="es">
