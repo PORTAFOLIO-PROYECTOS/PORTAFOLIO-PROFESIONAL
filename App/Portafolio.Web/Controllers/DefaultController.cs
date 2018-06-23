@@ -56,5 +56,10 @@ namespace Portafolio.Web.Controllers
             }
             return Json(rm);
         }
+
+        public ActionResult ExportaraPDF()
+        {
+            return new Rotativa.MVC.ActionAsPdf("PDF");
+        }
     }
 }
