@@ -61,5 +61,10 @@ namespace Portafolio.Web.Controllers
         {
             return new Rotativa.MVC.ActionAsPdf("PDF");
         }
+
+        public ActionResult PDF()
+        {
+            return View(usuario.Obtener(FrontOfficeStartUp.UsuarioVisualizando(), true));
+        }
     }
 }
